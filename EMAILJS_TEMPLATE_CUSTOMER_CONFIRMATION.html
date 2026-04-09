@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation de Réception - C.L.S Performance Énergétique</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+        }
+        
+        .top-line {
+            height: 4px;
+            background: linear-gradient(90deg, #00d4ff, #00b8d4, #00d4ff);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #0f172a 0%, #1a2135 100%);
+            padding: 40px 30px;
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .logo {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+        
+        .header-subtitle {
+            font-size: 13px;
+            color: #00d4ff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        .icon-box {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #f0f7ff 0%, #f9fafb 100%);
+            font-size: 48px;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .greeting {
+            font-size: 18px;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .message {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 25px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #f0f7ff 0%, #f9fafb 100%);
+            border-left: 4px solid #00d4ff;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+        
+        .highlight-title {
+            font-weight: 600;
+            color: #00d4ff;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+        
+        .highlight-content {
+            color: #1a1a1a;
+            font-size: 14px;
+        }
+        
+        .reference-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .ref-item {
+            padding: 15px;
+            background: #f9fafb;
+            border-radius: 6px;
+            text-align: center;
+        }
+        
+        .ref-label {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .ref-value {
+            font-size: 16px;
+            font-weight: 700;
+            color: #00d4ff;
+        }
+        
+        .timeline {
+            margin-bottom: 25px;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .timeline-dot {
+            width: 24px;
+            height: 24px;
+            background: #00d4ff;
+            border-radius: 50%;
+            margin-right: 15px;
+            margin-top: 2px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        
+        .timeline-content {
+            flex: 1;
+            padding-top: 2px;
+        }
+        
+        .timeline-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+        
+        .timeline-desc {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #00d4ff15 0%, #00b8d415 100%);
+            border: 1px solid #00d4ff30;
+            border-radius: 6px;
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .cta-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #00d4ff;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #00d4ff 0%, #00b8d4 100%);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 212, 255, 0.3);
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 212, 255, 0.4);
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+            margin: 25px 0;
+        }
+        
+        .faq-section {
+            margin-bottom: 25px;
+        }
+        
+        .faq-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #00d4ff;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+        }
+        
+        .faq-item {
+            margin-bottom: 12px;
+            padding: 12px;
+            background: #f9fafb;
+            border-radius: 4px;
+        }
+        
+        .faq-q {
+            font-size: 12px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+        
+        .faq-a {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .footer {
+            background: #0f172a;
+            color: #9ca3af;
+            padding: 30px;
+            text-align: center;
+            font-size: 11px;
+            line-height: 1.8;
+        }
+        
+        .footer-brand {
+            color: #fff;
+            font-weight: 700;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+        
+        .footer-links {
+            margin: 15px 0;
+            padding: 15px 0;
+            border-top: 1px solid #374151;
+            border-bottom: 1px solid #374151;
+        }
+        
+        .footer-links a {
+            color: #00d4ff;
+            text-decoration: none;
+            margin: 0 8px;
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 600;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .social-icons {
+            margin-top: 15px;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            margin: 0 5px;
+            font-size: 10px;
+            color: #00d4ff;
+            text-decoration: none;
+        }
+        
+        .checkmark {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #00d4ff, #00b8d4);
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+            line-height: 24px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-right: 8px;
+        }
+        
+        .status-good {
+            display: inline-flex;
+            align-items: center;
+            background: #f0fff4;
+            color: #22863a;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 600px) {
+            .content {
+                padding: 20px 15px;
+            }
+            
+            .header {
+                padding: 25px 15px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .reference-box {
+                grid-template-columns: 1fr;
+            }
+            
+            .greeting {
+                font-size: 16px;
+            }
+            
+            .footer {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Top Line -->
+        <div class="top-line"></div>
+        
+        <!-- Header -->
+        <div class="header">
+            <img src="https://raw.githubusercontent.com/your-repo/public/images/logo.png" alt="C.L.S" class="logo">
+            <p class="header-subtitle">✓ Confirmation</p>
+            <h1>Merci pour votre message</h1>
+        </div>
+        
+        <!-- Checkmark Icon -->
+        <div class="icon-box">✓</div>
+        
+        <!-- Content -->
+        <div class="content">
+            <div class="greeting">Bonjour {{from_name}},</div>
+            
+            <div class="message">
+                Nous avons bien reçu votre demande de contact. Merci de nous avoir contactés!
+                <br><br>
+                Notre équipe examine votre message en ce moment, et nous vous recontacterons très bientôt.
+            </div>
+            
+            <!-- Status Box -->
+            <div class="highlight-box">
+                <div class="highlight-title">📊 Statut de Votre Demande</div>
+                <div class="highlight-content">
+                    <div class="status-good">✓ Reçue et en cours de traitement</div>
+                </div>
+            </div>
+            
+            <!-- Reference -->
+            <div class="reference-box">
+                <div class="ref-item">
+                    <div class="ref-label">Référence</div>
+                    <div class="ref-value">#{{from_email}}</div>
+                </div>
+                <div class="ref-item">
+                    <div class="ref-label">Reçu le</div>
+                    <div class="ref-value">Aujourd'hui</div>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <!-- Timeline -->
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot">✓</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">Demande Reçue</div>
+                        <div class="timeline-desc">Votre message a été enregistré</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot">2</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">Examen Interne</div>
+                        <div class="timeline-desc">Notre équipe analyse votre demande (24-48h)</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot">3</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">Nous Vous Contactons</div>
+                        <div class="timeline-desc">Réponse personnalisée par notre équipe</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <!-- CTA -->
+            <div class="cta-section">
+                <div class="cta-title">Besoin d'aide immédiate?</div>
+                <p style="font-size: 12px; color: #666; margin-bottom: 12px;">Consultez notre FAQ ou contactez-nous directement</p>
+                <a href="https://www.cls-performance.fr/faq" class="cta-btn">Voir Notre FAQ</a>
+            </div>
+            
+            <!-- FAQ -->
+            <div class="faq-section">
+                <div class="faq-title">❓ Questions Fréquentes</div>
+                
+                <div class="faq-item">
+                    <div class="faq-q">Combien de temps avant une réponse?</div>
+                    <div class="faq-a">Nous répondons généralement sous 24-48 heures ouvrables.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-q">Puis-je modifier ma demande?</div>
+                    <div class="faq-a">Répondez directement à cet email avec vos modifications.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-q">Quels sont vos horaires?</div>
+                    <div class="faq-a">Lun-Ven: 8h00-18h00 | Sam-Dim: Fermé</div>
+                </div>
+            </div>
+            
+            <!-- Message recap -->
+            <div class="highlight-box" style="margin-bottom: 20px;">
+                <div class="highlight-title">📝 Résumé de Votre Demande</div>
+                <div class="highlight-content">
+                    <p><strong>Nom:</strong> {{from_name}}</p>
+                    <p><strong>Email:</strong> {{from_email}}</p>
+                    <p><strong>Téléphone:</strong> {{phone}}</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-brand">C.L.S PERFORMANCE ÉNERGÉTIQUE</div>
+            <p style="font-size: 10px; color: #6b7280;">Experts en Certificats d'Économies d'Énergie</p>
+            
+            <div class="footer-links">
+                <a href="https://www.cls-performance.fr">Site Web</a>
+                <a href="https://www.cls-performance.fr/contact">Contact</a>
+                <a href="https://www.cls-performance.fr/faq">FAQ</a>
+                <a href="https://www.cls-performance.fr/mentions-legales">Légal</a>
+            </div>
+            
+            <div class="social-icons">
+                <a href="https://linkedin.com/company/cls">LinkedIn</a>
+                <a href="https://facebook.com/cls">Facebook</a>
+            </div>
+            
+            <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #374151;">
+                <p style="font-size: 10px; color: #6b7280;">© 2026 C.L.S Performance Énergétique</p>
+                <p style="font-size: 10px; color: #6b7280; margin-top: 5px;">Message automatisé - Ne pas répondre. Répondez via le formulaire ou appelez-nous.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
