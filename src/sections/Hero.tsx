@@ -31,6 +31,7 @@ const Hero = () => {
         autoPlay
         muted
         loop
+        playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src="/images/video2.mp4" type="video/mp4" />
