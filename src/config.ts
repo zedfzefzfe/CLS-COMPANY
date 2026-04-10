@@ -48,7 +48,7 @@ export const navigationConfig: NavigationConfig = {
     { label: "Secteurs", href: "#secteurs" },
     { label: "CEE", href: "/cee" },
     { label: "Contact", href: "#contact" },
- 
+
   ],
   socialLinks: [
     { icon: "LinkedIn", label: "LinkedIn", href: "https://linkedin.com" },
@@ -80,7 +80,7 @@ export const heroConfig: HeroConfig = {
   title: "L'expert CEE qui finance vos travaux énergétiques",
   subtitle: "Résidentiel, Tertiaire, Industriel — solutions clé en main financées jusqu'à 100% via les Certificats d'Économies d'Énergie.",
   stats: [
-    
+
   ],
   ctaPrimaryText: "Nos Services",
   ctaPrimaryTarget: "#services",
@@ -182,47 +182,47 @@ export const productsConfig: ProductsConfig = {
   addedToCartText: "Demande envoyée !",
   categories: ["Tous", "Audit", "Isolation", "Chauffage", "Éclairage"],
   products: [
-    { 
-      id: 1, 
-      name: "Audit énergétique complet", 
-      price: 0, 
-      category: "Audit", 
-      image: "/images/service-audit.jpg" 
+    {
+      id: 1,
+      name: "Audit énergétique complet",
+      price: 0,
+      category: "Audit",
+      image: "/images/service-audit.jpg"
     },
-    { 
-      id: 2, 
-      name: "Isolation des combles", 
-      price: 0, 
-      category: "Isolation", 
-      image: "/images/service-isolation.jpg" 
+    {
+      id: 2,
+      name: "Isolation des combles",
+      price: 0,
+      category: "Isolation",
+      image: "/images/service-isolation.jpg"
     },
-    { 
-      id: 3, 
-      name: "Isolation des murs", 
-      price: 0, 
-      category: "Isolation", 
-      image: "/images/service-murs.jpg" 
+    {
+      id: 3,
+      name: "Isolation des murs",
+      price: 0,
+      category: "Isolation",
+      image: "/images/service-murs.jpg"
     },
-    { 
-      id: 4, 
-      name: "Pompe à chaleur", 
-      price: 0, 
-      category: "Chauffage", 
-      image: "/images/service-pac.jpg" 
+    {
+      id: 4,
+      name: "Pompe à chaleur",
+      price: 0,
+      category: "Chauffage",
+      image: "/images/service-pac.jpg"
     },
-    { 
-      id: 5, 
-      name: "Chaudière à condensation", 
-      price: 0, 
-      category: "Chauffage", 
-      image: "/images/service-chaudiere.jpg" 
+    {
+      id: 5,
+      name: "Chaudière à condensation",
+      price: 0,
+      category: "Chauffage",
+      image: "/images/service-chaudiere.jpg"
     },
-    { 
-      id: 6, 
-      name: "LED et éclairage intelligent", 
-      price: 0, 
-      category: "Éclairage", 
-      image: "/images/service-led.jpg" 
+    {
+      id: 6,
+      name: "LED et éclairage intelligent",
+      price: 0,
+      category: "Éclairage",
+      image: "/images/service-led.jpg"
     },
   ],
 };

@@ -21,6 +21,7 @@ const Hero = () => {
   };
 
   const titleLines = heroConfig.title.split('\n');
+  const isMobile = /iPad|iPhone|iPod|Android/i.test(navigator.userAgent);
 
   return (
     <section
@@ -29,16 +30,23 @@ const Hero = () => {
       className="relative h-screen w-full overflow-hidden"
     >
       {/* Video Background */}
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src="/images/video2-compressed.mp4" type="video/mp4" />
-      </video>
+      {isMobile ? (
+        <div
+          style={{ backgroundImage: 'url(/images/hero-poster.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
+          className="absolute inset-0 w-full h-full"
+        />
+      ) : (
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/images/video2.mp4" type="video/mp4" />
+        </video>
+      )}
 
       {/* Dark Overlay */}
       <div className="absolute inset-0" style={{ background: 'rgba(0, 0, 0, 0.45)' }} />
