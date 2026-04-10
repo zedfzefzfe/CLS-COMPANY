@@ -6,9 +6,11 @@ const Hero = () => {
 
   const [isVisible, setIsVisible] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     setIsVisible(true);
+    videoRef.current?.play().catch(() => {});
   }, []);
 
   const scrollToNext = () => {
@@ -28,6 +30,7 @@ const Hero = () => {
     >
       {/* Video Background */}
       <video
+        ref={videoRef}
         autoPlay
         muted
         loop
