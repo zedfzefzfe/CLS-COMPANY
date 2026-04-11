@@ -9,19 +9,19 @@ const steps = [
     icon: 'fa-solid fa-helmet-safety',
     title: 'Travaux',
     description: 'Nos équipes réalisent les travaux sans avance de frais.',
-    image: '/images/service-isolation.jpg',
+    image: '/images/Travaux.jpg',
   },
   {
     icon: 'fa-solid fa-file-lines',
     title: 'Dossier CEE',
     description: 'Nous constituons et déposons votre dossier CEE complet.',
-    image: '/images/service-murs.jpg',
+    image: '/images/a.jpg',
   },
   {
     icon: 'fa-solid fa-circle-check',
     title: 'Financement',
     description: 'Vous recevez votre prime directement sur votre compte.',
-    image: '/images/service-pac.jpg',
+    image: '/images/finan.png',
   },
 ];
 
