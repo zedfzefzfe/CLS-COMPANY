@@ -3,7 +3,7 @@ const steps = [
     icon: 'fa-solid fa-magnifying-glass',
     title: 'Audit gratuit',
     description: 'Un expert analyse vos installations gratuitement.',
-    image: '/images/audit.png',
+    image: '/images/audit.jpg',
   },
   {
     icon: 'fa-solid fa-helmet-safety',

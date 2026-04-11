@@ -118,8 +118,8 @@ export const subHeroConfig: SubHeroConfig = {
   ],
   linkText: "En savoir plus",
   linkTarget: "#about",
-  image1: "/images/ci.png",
-  image2: "/images/TERTI.png",
+  image1: "/images/acc.jpg",
+  image2: "/images/acc2.jpg",
   stats: [
     { value: 15, suffix: "+", label: "collaborateurs" },
     { value: 350, suffix: "+", label: "Clients accompagnés" },
