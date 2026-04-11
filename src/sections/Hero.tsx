@@ -91,7 +91,18 @@ const Hero = () => {
                 e.preventDefault();
                 document.querySelector(heroConfig.ctaPrimaryTarget)?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="px-9 md:px-10 py-3.5 md:py-4 bg-cls-green text-white font-medium tracking-wide text-sm btn-hover rounded-lg flex items-center justify-center gap-2"
+              className="text-white font-semibold tracking-wide text-sm flex items-center justify-center gap-2 transition-all duration-300 rounded"
+              style={{
+                backgroundColor: '#16a34a',
+                padding: '14px 32px',
+                borderRadius: '6px',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#15803d';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#16a34a';
+              }}
             >
               <span>{heroConfig.ctaPrimaryText}</span>
               <i className="fa-solid fa-arrow-right"></i>
@@ -104,7 +115,21 @@ const Hero = () => {
                 e.preventDefault();
                 document.querySelector(heroConfig.ctaSecondaryTarget)?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="px-9 md:px-10 py-3.5 md:py-4 border-2 border-white text-white font-medium tracking-wide text-sm hover:bg-white hover:text-cls-teal transition-all duration-300 rounded-lg"
+              className="text-white font-semibold tracking-wide text-sm transition-all duration-300 rounded"
+              style={{
+                backgroundColor: 'transparent',
+                border: '2px solid white',
+                padding: '12px 30px',
+                borderRadius: '6px',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = 'white';
+                e.currentTarget.style.color = '#16a34a';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'transparent';
+                e.currentTarget.style.color = 'white';
+              }}
             >
               {heroConfig.ctaSecondaryText}
             </a>

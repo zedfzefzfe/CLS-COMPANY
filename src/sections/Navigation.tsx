@@ -204,7 +204,20 @@ const Navigation = ({ cartItems, onRemoveFromCart, onUpdateQuantity }: Navigatio
           <div className="flex items-center gap-4 md:gap-6">
             <button
               onClick={openQuotePanel}
-              className="hidden lg:inline-flex items-center justify-center gap-2 px-9 py-3.5 bg-cls-green text-white font-medium tracking-wide text-sm btn-hover rounded-lg"
+              className="hidden lg:inline-flex items-center justify-center gap-2 text-white font-semibold tracking-[0.05em] text-sm rounded transition-all duration-300"
+              style={{
+                backgroundColor: '#16a34a',
+                padding: '12px 28px',
+                borderRadius: '6px',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#15803d';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(22, 163, 74, 0.35)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#16a34a';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
               aria-label="Devis Gratuit"
             >
               <span>Devis Gratuit</span>
@@ -321,7 +334,20 @@ const Navigation = ({ cartItems, onRemoveFromCart, onUpdateQuantity }: Navigatio
 
               <button
                 onClick={openQuotePanel}
-                className="mt-4 inline-flex lg:hidden items-center justify-center gap-2 px-9 py-3.5 bg-cls-green text-white font-medium tracking-wide text-sm btn-hover rounded-lg"
+                className="mt-4 inline-flex lg:hidden items-center justify-center gap-2 text-white font-semibold tracking-[0.05em] text-sm rounded transition-all duration-300"
+                style={{
+                  backgroundColor: '#16a34a',
+                  padding: '12px 28px',
+                  borderRadius: '6px',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#15803d';
+                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(22, 163, 74, 0.35)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = '#16a34a';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
               >
                 <span>Devis Gratuit</span>
                 <span aria-hidden="true">→</span>
