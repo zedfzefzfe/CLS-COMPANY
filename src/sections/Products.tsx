@@ -111,7 +111,7 @@ const Products = ({ onAddToCart: _onAddToCart }: ProductsProps) => {
     <section
       id="services"
       ref={sectionRef}
-      className="relative py-24 bg-white overflow-hidden"
+      className="relative pt-24 pb-10 bg-white overflow-hidden"
     >
       <div className="max-w-[1000px] mx-auto px-6 md:px-12">
         
@@ -193,7 +193,7 @@ const Products = ({ onAddToCart: _onAddToCart }: ProductsProps) => {
 
                   {/* Central Node */}
                   <div className="absolute left-0 md:static flex justify-center mt-1 md:mt-0 shrink-0 mx-auto md:w-[80px]">
-                    <div className={`w-14 h-14 md:w-16 md:h-16 rounded-full bg-white border-4 border-white shadow-[0_0_15px_rgba(0,0,0,0.1)] flex items-center justify-center z-10 transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(34,197,94,0.3)] ${
+                    <div className={`w-14 h-14 md:w-16 md:h-16 rounded-full border-4 border-white shadow-[0_0_15px_rgba(0,0,0,0.1)] flex items-center justify-center z-10 transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(34,197,94,0.3)] ${
                       visibleCardIds.includes(svc.id) ? 'bg-[#22c55e]' : 'bg-slate-200'
                     }`}>
                       <i className={`${svc.icon} ${visibleCardIds.includes(svc.id) ? 'text-white' : 'text-slate-400'} text-xl transition-colors duration-500`}></i>
