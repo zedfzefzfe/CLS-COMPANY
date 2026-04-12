@@ -56,7 +56,7 @@ const VideoSection = () => {
   }, []);
 
   return (
-    <section id="cee" className="bg-white pt-10 pb-20 md:pb-24">
+    <section id="cee" className="bg-white pt-10 pb-20 md:pb-24 overflow-x-hidden">
       <div className="max-w-[1000px] mx-auto px-6 md:px-12">
         
         {/* Header */}
