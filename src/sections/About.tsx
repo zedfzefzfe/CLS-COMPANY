@@ -22,7 +22,7 @@ const AboutSection = ({ id, image, contentBg, textColor, reverse, children }: Ab
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0, rootMargin: '0px 0px 100vh 0px' }
     );
 
     if (sectionRef.current) {
@@ -40,7 +40,7 @@ const AboutSection = ({ id, image, contentBg, textColor, reverse, children }: Ab
     >
       {/* Image Side */}
       <div
-        className="w-full lg:w-3/5 h-[50vh] lg:h-auto min-h-[400px] bg-cover bg-top bg-fixed"
+        className="w-full lg:w-3/5 h-[50vh] lg:h-auto min-h-[400px] bg-cover bg-top"
         style={{ backgroundImage: `url(${image})` }}
       />
 
