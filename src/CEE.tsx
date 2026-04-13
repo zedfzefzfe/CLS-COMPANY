@@ -75,7 +75,7 @@ const CEE = () => {
 
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-x-hidden">
       {/* 1. HERO SECTION — KEEP AS IS */}
       <section className="relative min-h-[90vh] w-full flex items-center justify-center overflow-hidden bg-[#0f172a] pt-20">
         <div className="absolute inset-0 z-0">
