@@ -2,25 +2,25 @@ const steps = [
   {
     icon: 'fa-solid fa-magnifying-glass',
     title: 'Audit gratuit',
-    description: 'Un expert analyse vos installations gratuitement.',
+    description: 'Un expert visite votre site et analyse l\'ensemble de vos installations énergétiques gratuitement. Il identifie les travaux éligibles et estime le montant de votre prime CEE.',
     image: '/images/audit.jpg',
   },
   {
     icon: 'fa-solid fa-helmet-safety',
     title: 'Travaux',
-    description: 'Nos équipes réalisent les travaux sans avance de frais.',
+    description: 'Nos équipes certifiées RGE réalisent les travaux d\'économies d\'énergie retenus, sans aucune avance de frais de votre part. Qualité garantie et conformité totale.',
     image: '/images/Travaux.jpg',
   },
   {
     icon: 'fa-solid fa-file-lines',
     title: 'Dossier CEE',
-    description: 'Nous constituons et déposons votre dossier CEE complet.',
+    description: 'CLS Habitat constitue, vérifie et dépose votre dossier CEE complet auprès des obligés. Nous gérons toutes les démarches administratives à votre place.',
     image: '/images/a.jpg',
   },
   {
     icon: 'fa-solid fa-circle-check',
     title: 'Financement',
-    description: 'Vous recevez votre prime directement sur votre compte.',
+    description: 'Une fois le dossier validé, vous recevez votre prime CEE directement sur votre compte bancaire. Aucun frais caché, aucune mauvaise surprise.',
     image: '/images/finan.png',
   },
 ];
@@ -95,7 +95,7 @@ const VideoSection = () => {
                 ref={(el) => {
                   cardRefs.current[index] = el;
                 }}
-                className="relative rounded-lg p-8 overflow-hidden"
+                className="relative rounded-lg p-8 md:p-12 overflow-hidden md:min-h-[280px] flex flex-col justify-end"
                 style={{
                   background: `linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('${step.image}')`,
                   backgroundSize: 'cover',
