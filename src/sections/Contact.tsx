@@ -178,7 +178,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <span className="block text-xs uppercase tracking-wider opacity-60 mb-1">{contactConfig.phoneLabel}</span>
-                    <a href={`tel:${contactConfig.phone}`} className="font-normal hover:text-cls-lime transition-colors">
+                    <a href={`tel:${contactConfig.phone.replace(/[^+\d]/g, '')}`} className="font-normal hover:text-cls-lime transition-colors">
                       {contactConfig.phone}
                     </a>
                   </div>

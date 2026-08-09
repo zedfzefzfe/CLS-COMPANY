@@ -446,9 +446,9 @@ export const contactConfig: ContactConfig = {
   locationLabel: "Adresse",
   location: "15 Rue de l'Énergie, 75008 Paris, France",
   emailLabel: "Email",
-  email: "contact@cls-performance.fr",
+  email: "Contact@cls-habitat.fr",
   phoneLabel: "Téléphone",
-  phone: "+33 1 23 45 67 89",
+  phone: "06.62.58.54.14",
   formFields: {
     nameLabel: "Nom complet",
     namePlaceholder: "Votre nom",
