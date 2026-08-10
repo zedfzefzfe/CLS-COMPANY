@@ -444,7 +444,7 @@ export const contactConfig: ContactConfig = {
   heading: "Contactez-nous",
   description: "Vous avez un projet d'économies d'énergie ? Nos experts sont à votre écoute pour vous accompagner dans l'obtention de vos primes CEE.",
   locationLabel: "Adresse",
-  location: "15 Rue de l'Énergie, 75008 Paris, France",
+  location: "40 rue de Bruxelles, 69100 Villeurbanne, France",
   emailLabel: "Email",
   email: "Contact@cls-habitat.fr",
   phoneLabel: "Téléphone",
